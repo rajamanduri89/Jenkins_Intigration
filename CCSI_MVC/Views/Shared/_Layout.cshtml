@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Main.css" rel="stylesheet" />
+    <link href="~/Content/animate.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div>
+        <div class="nav navbar-inverse navbar-fixed-top nav-justified animated fadeInDown ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("CCSI", "Index", "Home", new { @class = "navbar-brand" })
+                </div>
+                <div class="collapse navbar-collapse"  id="#myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        @*<li>@Html.ActionLink("Services", "Index", "Home")</li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="drop">Services</a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li>
+                                    @Html.ActionLink("Overview", "Index", "Home")
+                                </li>
+                                <li role="menuitem">
+                                    @Html.ActionLink("Service Process", "Index", "Home")
+                                </li>
+                                <li role="menuitem">
+                                    @Html.ActionLink("It Solutions", "Index", "Home")
+                                </li>
+                                <li role="menuitem">
+                                    @Html.ActionLink("Clients", "Index", "Home")
+                                </li>
+                                <li role="menuitem">
+                                    @Html.ActionLink("Project Outsourcing ", "Index", "Home")
+                                </li>
+
+                                </ul>
+                            </li>
+                        <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="drop">Careers</a>
+                                    <ul class="dropdown-menu animated fadeInDown">
+                                        <li>
+                                            @Html.ActionLink("Overview", "Index", "Home")
+                                        </li>
+                                        <li role="menuitem">
+                                            @Html.ActionLink("Technology Expertise", "Index", "Home")
+                                        </li>
+                                        <li role="menuitem">
+                                            @Html.ActionLink("Refer a Friend", "Index", "Home")
+                                        </li>
+                                        <li role="menuitem">
+                                            @Html.ActionLink("Submit a Resume", "Index", "Home")
+                                        </li>
+                                    </ul>
+                                </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="drop">IT Resources</a>
+                            <ul class="dropdown-menu animated fadeInDown">
+                                <li>
+                                    @Html.ActionLink("Overview", "Index", "Home")
+                                </li>
+                                <li role="menuitem">
+                                    @Html.ActionLink("Contact a Recruiter", "Index", "Home")
+                                </li>                                
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("About Us", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "Index", "Home")</li>
+                        <li>@Html.ActionLink("History", "Index", "Home")</li>
+                        <li>@Html.ActionLink("FAQ's", "Index", "Home")</li>
+
+
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#login" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer class="navbar-fixed-bottom"style="text-align:center;height:35px;">
+
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
